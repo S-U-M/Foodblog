@@ -66,8 +66,8 @@ body {
 
 /* Placeholder boxes */
 .upload-placeholder {
-  width: 150px;
-  height: 120px;
+  width: 200px;
+  height: 150px;
   overflow: hidden;
   background-color: #8d83b6;
   border-radius: 10px;
@@ -76,13 +76,75 @@ body {
   justify-content: center;
   font-size: 40px;
   cursor: pointer;
+  position: relative;
 }
 
 .preview {
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* 👈 THIS is the key */
+  object-fit: cover; 
   border-radius: 10px;
+}
+
+/* Loader overlay */
+.loader-overlay {
+  position: absolute;
+  z-index: 10;
+  inset: 0;
+  background: #00000059;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+/* Loader spinner with ring style */
+.spinner {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner-ring {
+  width: 80px;
+  height: 80px;
+  transform: rotate(270deg);
+  position: absolute;
+  inset: 0;
+}
+
+.ring-bg,
+.ring-progress {
+  fill: none;
+  stroke-width: 5;
+}
+
+.ring-bg {
+  stroke: #ffffff40;
+}
+
+.ring-progress {
+  stroke: #fed964;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.2s ease;
+}
+
+.loader-text {
+  position: relative;
+  font-size: 16px;
+  font-weight: 900;
+  color: #fed964;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  user-select: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .cancel-btn {
