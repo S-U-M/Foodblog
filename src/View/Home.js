@@ -1,4 +1,5 @@
 import "../Style/Style.css";
+import UploadCard from "../Components/UploadCard";
 
 function Home() {
     return (
@@ -19,9 +20,9 @@ function Home() {
             <h2>Show your food to the world</h2>
 
             <div className="upload-section">
-                <div className="upload-placeholder">+</div>
-                <div className="upload-placeholder">+</div>
-                <div className="upload-placeholder">+</div>
+                <UploadCard />
+                <UploadCard />
+                <UploadCard />               
             </div>
 
             <div className="cancel-btn">
