@@ -1,7 +1,15 @@
-import Home from "./View/Home";
+import MainRoute from "./Routes/MainRoute";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import "./Style/Style.css";
 
 function App() {
-  return <Home />;
-}
+  return (
+    <>
+      <MainRoute />
+    </>
+  );
+};
 
 export default App;
