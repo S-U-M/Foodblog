@@ -2,7 +2,7 @@ import "../Style/Style.css";
 import UploadCard from "../Components/UploadCard";
 import { Link } from "react-router-dom";
 
-function Home() {
+function Home({ images }) {
     return (
         <div className="container">
 
@@ -18,8 +18,9 @@ function Home() {
                     {/* <button className="menu-link highlighted">Upload</button>
                 <button className="menu-su">AboutUs</button> */}
 
-                    <Link to={"/aboutus"} className="menu-link highlighted">Upload</Link>
+                    <Link to={"/upload"} className="menu-link highlighted">Upload</Link>
                     <Link to={"/aboutus"} className="menu-link">AboutUs</Link>
+                    <Link to={"/noplin"} className="menu-link">Noplin</Link>
 
                 </div>
             </div>
@@ -29,16 +30,15 @@ function Home() {
                 <h2>Show your food to the world</h2>
 
                 <div className="upload-section">
-                    <UploadCard />
-                    <UploadCard />
-                    <UploadCard />
+                    <UploadCard image={images[0]} />
+                    <UploadCard image={images[1]} />
+                    <UploadCard image={images[2]} />
                 </div>
 
                 <div className="cancel-btn">
                     <p>Cancel all uploads</p>
                 </div>
             </div>
-
         </div>
     );
 }

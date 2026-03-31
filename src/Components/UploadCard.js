@@ -39,7 +39,7 @@ function UploadCard() {
     }
 
     return (
-        <label className = "upload-placeholder">
+        <label className="upload-placeholder">
             <input
                 type="file"
                 accept="image/*"
@@ -77,9 +77,9 @@ function UploadCard() {
             )}
 
             {/*Plus Icon*/}
-            <PlusIcon style={{ width: 35}} />
+            <PlusIcon style={{ width: 35 }} />
 
-            {/*Preview*/}            
+            {/*Preview*/}
             {selectedImage && selectedImageUrl && (
                 <img
                     src={selectedImageUrl}
